@@ -1,11 +1,43 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker container logs 746ae274d425
+
+# 746ae274d425caa460d3ba9b61f222a6c6d017d9cd3bc0e6ea03a496fc811054
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:2022-10-27 12:01:50,678,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:2022-10-27 12:01:50,678,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:app:2022-10-27 12:02:06,071, DB accessed
+INFO:werkzeug:2022-10-27 12:02:06,079, 172.17.0.1 - - [27/Oct/2022 12:02:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-27 12:02:06,135, 172.17.0.1 - - [27/Oct/2022 12:02:06] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-10-27 12:02:07,178, DB accessed
+INFO:app:2022-10-27 12:02:07,178, Article with the title: '2020 CNCF Annual Report' retrieved
+INFO:werkzeug:2022-10-27 12:02:07,181, 172.17.0.1 - - [27/Oct/2022 12:02:07] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-27 12:02:07,284, 172.17.0.1 - - [27/Oct/2022 12:02:07] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-10-27 12:02:11,761, 172.17.0.1 - - [27/Oct/2022 12:02:11] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-27 12:02:11,861, 172.17.0.1 - - [27/Oct/2022 12:02:11] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-10-27 12:02:14,019, DB accessed
+INFO:app:2022-10-27 12:02:14,026, New article with the title 'sdf' created
+INFO:werkzeug:2022-10-27 12:02:14,027, 172.17.0.1 - - [27/Oct/2022 12:02:14] "POST /create HTTP/1.1" 302 -
+INFO:app:2022-10-27 12:02:14,037, DB accessed
+INFO:werkzeug:2022-10-27 12:02:14,038, 172.17.0.1 - - [27/Oct/2022 12:02:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-27 12:02:14,098, 172.17.0.1 - - [27/Oct/2022 12:02:14] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-10-27 12:02:15,733, DB accessed
+INFO:app:2022-10-27 12:02:15,733, Article with the title: 'sdf' retrieved
+INFO:werkzeug:2022-10-27 12:02:15,734, 172.17.0.1 - - [27/Oct/2022 12:02:15] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-27 12:02:15,825, 172.17.0.1 - - [27/Oct/2022 12:02:15] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2022-10-27 12:02:17,562, DB accessed
+INFO:werkzeug:2022-10-27 12:02:17,563, 172.17.0.1 - - [27/Oct/2022 12:02:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-27 12:02:17,658, 172.17.0.1 - - [27/Oct/2022 12:02:17] "GET /static/css/main.css HTTP/1.1" 304 -
+
